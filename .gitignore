@@ -1,0 +1,10 @@
+alphabets_images/
+alphabets_processed/
+alphabets_processing.py
+alphabets_train.py
+digits_LUT.csv
+digits_images/
+digits_processed/
+digits_processing.py
+digits_train.py
+
