@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px;
+}
+
+.left {
+    width: 39%;
+}
+
+.mid {
+    width: 35%;
+}
+
+.right {
+    width: 26%;
+}
+
+body {
+    background: rgb(198, 214, 235);
+}
+
+header {
+    background: rgb(78, 113, 211);
+    color: rgb(250, 237, 54);
+    text-align: center;
+    font-family: "Courier New";
+    font-size: 28px;
+}
+
+#canvas {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.button {
+    height: 30px;
+    width: 175px;
+    padding: 15px, 25px;
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 5, 148);
+    border: none;
+    box-shadow: 0 3px rgb(117, 117, 117);
+}
+
+.button:active {
+    background-color: rgb(103, 66, 207);
+    box-shadow: 0 5px rgb(117, 117, 117);
+    transform: translateY(4px);
+}
+
+.button:hover {
+    background-color: rgb(103, 66, 207);
+}
+
+.button-small {
+    height: 50px;
+    width: 50px;
+    padding: 15px, 25px;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    margin-right: 0.25em;
+    font-size: 28px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(144, 189, 22);
+    border: none;
+    box-shadow: 0 3px rgb(117, 117, 117);
+}
+
+.button-small:active {
+    background-color: rgb(100, 131, 16);
+    box-shadow: 0 5px rgb(117, 117, 117);
+    transform: translateY(4px);
+}
+
+.button-small:hover {
+    background-color: rgb(100, 131, 16);
+}
+
+.button-small-nd {
+    height: 50px;
+    width: 50px;
+    padding: 15px, 25px;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    margin-right: 0.25em;
+    font-size: 28px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(214, 90, 90);
+    border: none;
+    box-shadow: 0 3px rgb(117, 117, 117);
+}
+
+.button-small-nd:active {
+    background-color: rgb(175, 37, 37);
+    box-shadow: 0 5px rgb(117, 117, 117);
+    transform: translateY(4px);
+}
+
+.button-small-nd:hover {
+    background-color: rgb(175, 37, 37);
+}

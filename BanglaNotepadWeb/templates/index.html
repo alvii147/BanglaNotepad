@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8" />
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+        <meta http-equiv = "X-UA-Compatible" content = "ie = edge" />
+        <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'styles.css')}}">
+        <title>BanglaNotepad</title>
+    </head>
+    <body>
+        <script src = "{{url_for('static', filename='app.js')}}"></script>
+        <script src = "{{url_for('static', filename='jquery.min.js')}}"></script>
+        <header>
+            <h1>Bangla Notepad</h1>
+        </header>
+        <div class = "row">
+            <div class = "column left">
+                <canvas id = "canvas"></canvas>
+                <p style = "font-family: 'Arial'; font-size: 18px;">Created by Zahin Zaman</p>
+            </div>
+            <div class = "column mid">
+                <div class = "row">
+                    <textarea id = "txtbx" name = "txtbx" rows = "5" cols = "30" style = "font-size: 18pt"></textarea>
+                </div>
+                <div class = "row">
+                    <button class = "button-small-nd" onclick = "addText('া');">া</button>
+                    <button class = "button-small-nd" onclick = "addText('ি');">ি</button>
+                    <button class = "button-small-nd" onclick = "addText('ী');">ী</button>
+                    <button class = "button-small-nd" onclick = "addText('ু');">ু</button>
+                    <button class = "button-small-nd" onclick = "addText('ূ');">ূ</button>
+                    <button class = "button-small-nd" onclick = "addText('ৃ');">ৃ</button>
+                    <button class = "button-small-nd" onclick = "addText('ে');">ে</button>
+                    <button class = "button-small-nd" onclick = "addText('ৈ');">ৈ</button>
+                </div>
+                <div class = "row">
+                    <button class = "button-small-nd" onclick = "addText('ো');">ো</button>
+                    <button class = "button-small-nd" onclick = "addText('ৌ');">ৌ</button>
+                    <button class = "button-small" onclick = "addText('‍ৎ');">‍ৎ</button>
+                    <button class = "button-small" onclick = "addText('‍ং');">‍ং</button>
+                    <button class = "button-small" onclick = "addText('‍ঃ');">‍ঃ</button>
+                    <button class = "button-small" onclick = "addText('‍‍ঁ');">‍‍ঁ</button>
+                    <button class = "button-small-nd" onclick = "addText('‍্');">‍্</button>
+                    <button class = "button-small-nd" onclick = "addText('‍্য');">‍্য</button>
+                </div>
+                <div class = "row">
+                    <input type = "radio" name = "mode" id = "alphabet" checked>
+                    <label for = "alphabet" style = "font-family: 'Arial'; font-size: 20px;">Alphabets</label><br>
+                    <input type = "radio" name = "mode" id = "number">
+                    <label for = "number" style = "font-family: 'Arial'; font-size: 20px;">Numbers</label>
+                </div>
+                <div class = "row">
+                    <button class = "button" onclick = "sendImage();">Predict</button>
+                </div>
+                <div class = "row">
+                    <button class = "button" onclick = "clearCanvas();">Clear Canvas</button>
+                </div>
+            </div>
+            <div class = "column right">
+                <div class = "row">
+                    <button class = "button-small" onclick = "addText('অ');">অ</button>
+                    <button class = "button-small" onclick = "addText('আ');">আ</button>
+                    <button class = "button-small" onclick = "addText('ই');">ই</button>
+                    <button class = "button-small" onclick = "addText('ঈ');">ঈ</button>
+                    <button class = "button-small" onclick = "addText('উ');">উ</button>
+                    <button class = "button-small" onclick = "addText('ঊ');">ঊ</button>
+                </div>
+                <div class = "row">
+                    <button class = "button-small" onclick = "addText('ঋ');">ঋ</button>
+                    <button class = "button-small" onclick = "addText('এ');">এ</button>
+                    <button class = "button-small" onclick = "addText('ঐ');">ঐ</button>
+                    <button class = "button-small" onclick = "addText('ও');">ও</button>
+                    <button class = "button-small" onclick = "addText('ঔ');">ঔ</button>
+                </div>
+                <div class = "row">
+                    <button class = "button-small" onclick = "addText('ক');">ক</button>
+                    <button class = "button-small" onclick = "addText('খ');">খ</button>
+                    <button class = "button-small" onclick = "addText('গ');">গ</button>
+                    <button class = "button-small" onclick = "addText('ঘ');">ঘ</button>
+                    <button class = "button-small" onclick = "addText('ঙ');">ঙ</button>
+                </div>
+                <div class = "row">
+                    <button class = "button-small" onclick = "addText('চ');">চ</button>
+                    <button class = "button-small" onclick = "addText('ছ');">ছ</button>
+                    <button class = "button-small" onclick = "addText('জ');">জ</button>
+                    <button class = "button-small" onclick = "addText('ঝ');">ঝ</button>
+                    <button class = "button-small" onclick = "addText('ঞ');">ঞ</button>
+                </div>
+                <div class = "row">
+                    <button class = "button-small" onclick = "addText('ট');">ট</button>
+                    <button class = "button-small" onclick = "addText('ঠ');">ঠ</button>
+                    <button class = "button-small" onclick = "addText('ড');">ড</button>
+                    <button class = "button-small" onclick = "addText('ঢ');">ঢ</button>
+                    <button class = "button-small" onclick = "addText('ণ');">ণ</button>
+                </div>
+                <div class = "row">
+                    <button class = "button-small" onclick = "addText('ত');">ত</button>
+                    <button class = "button-small" onclick = "addText('থ');">থ</button>
+                    <button class = "button-small" onclick = "addText('দ');">দ</button>
+                    <button class = "button-small" onclick = "addText('ধ');">ধ</button>
+                    <button class = "button-small" onclick = "addText('ন');">ন</button>
+                </div>
+                <div class = "row">
+                    <button class = "button-small" onclick = "addText('প');">প</button>
+                    <button class = "button-small" onclick = "addText('ফ');">ফ</button>
+                    <button class = "button-small" onclick = "addText('ব');">ব</button>
+                    <button class = "button-small" onclick = "addText('ভ');">ভ</button>
+                    <button class = "button-small" onclick = "addText('ম');">ম</button>
+                </div>
+                <div class = "row">
+                    <button class = "button-small" onclick = "addText('য');">য</button>
+                    <button class = "button-small" onclick = "addText('র');">র</button>
+                    <button class = "button-small" onclick = "addText('ল');">ল</button>
+                    <button class = "button-small" onclick = "addText('শ');">শ</button>
+                    <button class = "button-small" onclick = "addText('ষ');">ষ</button>
+                </div>
+                <div class = "row">
+                    <button class = "button-small" onclick = "addText('স');">স</button>
+                    <button class = "button-small" onclick = "addText('হ');">হ</button>
+                    <button class = "button-small" onclick = "addText('য়');">য়</button>
+                    <button class = "button-small" onclick = "addText('ড়');">ড়</button>
+                    <button class = "button-small" onclick = "addText('ঢ়');">ঢ়</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
