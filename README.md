@@ -24,7 +24,7 @@ model.save("alphabets.model", save_format = "h5")
 ```
 ### Demo Website
 The results of the model can be tested [here](http://banglanotepad.herokuapp.com/).
-![Snapshot](BanglaNotepadWeb/NotepadSnapshot.gif)
+![Snapshot](BanglaNotepadWeb/NotepadSnapshot.gif)  
 Letters in green have been included in trained model, letters in red have not.
 ## Next Steps
 In order to program accurate predictions, I believe using stacked models is essentials. Next step is to read multiple letters and words from images and process the different letters and words individually. This can be done using stroke detection tools, although may be challenging. Finally I also have plans of incorporating natural language processing for Bengali words and linguistics (but that's way too far ahead for me to think about right now. :stuck_out_tongue:
